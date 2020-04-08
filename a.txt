@@ -1,0 +1,171 @@
+s=0
+a = "1,1"
+b = "1,2"
+c = "1,3"
+d = "2,1"
+e = "2,2"
+f = "2,3"
+g = "3,1"
+h = "3,2"
+k = "3,3"
+  
+for i in range(1,5,1) :
+    print(a,"|",b,"|",c)
+    print("---------------")
+    print(d,"|",e,"|",f)
+    print("---------------")
+    print(g,"|",h,"|",k)
+    print("first player's turn")
+    for j in range (1,10,1) :
+        ro = int(input("i="))
+        co = int(input("j="))
+        if ro == 1 :
+            if co == 1 :
+                if a == "1,1" :
+                    a = " X "
+                    break
+                else :
+                    print("Error, Please try again")
+            if co == 2 :
+                if b == "1,2":
+                    b = " X "
+                    break
+                else :
+                    print("Error, Please try again")
+            if co == 3 :
+                if c == "1,3" :
+                    c = " X "
+                    break
+                else :
+                    print("Error, Please try again")
+        if ro == 2 :
+            if co == 1 :
+                if d == "2,1" :
+                    d = " X "
+                    break
+                else :
+                    print("Error, Please try again")
+            if co == 2 :
+                if e == "2,2" :
+                    e = " X "
+                    break
+                else :
+                    print("Error, Please try again")
+            if co == 3 :
+                if f == "2,3" :
+                    f = " X "
+                    break
+                else :
+                    print("Error, Please try again")
+        if ro == 3 :
+            if co == 1 :
+                if g == "3,1" :
+                    g = " X "
+                    break
+                else :
+                    print("Error, Please try again")
+            if co == 2 :
+                if h == "3,2" :
+                    h = " X "
+                    break
+                else :
+                    print("Error, Please try again")
+            if co == 3 :
+                if k == "3,3" :
+                    k = " X "
+                    break
+                else :
+                    print("Error, Please try again")
+        else :
+            print("Error, Please try again")
+    print(a,"|",b,"|",c)
+    print("---------------")
+    print(d,"|",e,"|",f)
+    print("---------------")
+    print(g,"|",h,"|",k)
+    if a == b == c or d == e == f or g == h == k or a == d == g or b == e == h or c == f == k or a == e == k or c == e == g :
+        print("first player won!")
+        i = 10
+        s = 1
+        break
+    for n in range (1,10,1) :
+        print("second players's turn")
+        row = int(input("i="))
+        col = int(input("j="))
+        if row == 1 :
+            if col == 1 :
+                if a == "1,1" :
+                    a = " O "
+                    break
+                else :
+                    print("Error, Please try again")
+            if col == 2 :
+                if b == "1,2" :
+                    b = " O "
+                    break
+                else :
+                    print("Error, Please try again")
+            if col == 3 :
+                if c == "1,3" :
+                    c = " O "
+                    break
+                else :
+                    print("Error, Please try again")
+        if row == 2 :
+            if col == 1 :
+                if d == "2,1" :
+                    d = " O "
+                    break
+                else :
+                    print("Error, Please try again")
+            if col == 2 :
+                if e == "2,2" :
+                    e = " O "
+                    break
+                else :
+                    print("Error, Please try again")
+            if col == 3 :
+                if f == "2,3" :
+                    f = " O "
+                    break
+                else :
+                    print("Error, Please try again")
+        if row == 3 :
+            if col == 1 :
+                if g == "3,1" :
+                    g = " O "
+                    break
+                else :
+                    print("Error, Please try again")
+            if col == 2 :
+                if h == "3,2" :
+                    h = " O "
+                    break
+                else :
+                    print("Error, Please try again")
+            if col == 3 :
+                if k == "3,3" :
+                    k = " O "
+                    break
+                else :
+                    print("Error, Please try again")
+        else :
+             print("Error, Please try again")
+        if a == b == c or d == e == f or g == h == k or a == d == g or b == e == h or c == f == k or a == e == k or c == e == g :
+            print("Second player won!")
+        print(a,"|",b,"|",c)
+        print("---------------")
+        print(d,"|",e,"|",f)
+        print("---------------")
+        print(g,"|",h,"|",k)
+        s = 1
+        i = 10
+        break
+if s != 1 :
+    print(a,"|",b,"|",c)
+    print("---------------")
+    print(d,"|",e,"|",f)
+    print("---------------")
+    print(g,"|",h,"|",k)
+    print("GAME DRAW!")
+
